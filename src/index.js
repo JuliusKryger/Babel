@@ -10,6 +10,10 @@ document.getElementById("all-content").style.display = "block"
 */
 
 /* JS For Exercise-1 below */
+const jokes = jokeFacade.getJokes()
+let listOfJokes = jokes.map(joke => "<li>" + joke + "</li>")
+const listJokes = listOfJokes.join('')
+document.getElementById("jokes").innerHTML = listJokes
 
 
 /* JS For Exercise-2 below */
