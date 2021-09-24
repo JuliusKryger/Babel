@@ -10,10 +10,12 @@ document.getElementById("all-content").style.display = "block"
 */
 
 /* JS For Exercise-1 below */
+function JokeList () {
 const jokes = jokeFacade.getJokes()
 let listOfJokes = jokes.map(joke => "<li>" + joke + "</li>")
 const listJokes = listOfJokes.join('')
 document.getElementById("jokes").innerHTML = listJokes
+}
 
 const input = document.getElementById('findJoke');
 input.addEventListener('input', event => {
@@ -22,7 +24,14 @@ input.addEventListener('input', event => {
   console.log(input)
 })
 
-
+const jokeId = document.getElementById('btn_joke')
+jokeId.addEventListener('click', event => {
+  event.preventDefault();
+  const addJokes = document.getElementById('addJoke')
+  console.log(addJokes.value) //Testing if we get the value
+  jokeFacade.addJoke(addJokes.value)
+  JokeList();
+})
 /* JS For Exercise-2 below */
 
 

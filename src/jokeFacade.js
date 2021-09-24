@@ -4,7 +4,7 @@
 */
 
 //Setup some dummy test data
-const jokes = [
+let jokes = [
   "A day without sunshine is like, night.",
   "At what age is it appropriate to tell my dog that he's adopted?",
   "I intend to live forever, or die trying",
