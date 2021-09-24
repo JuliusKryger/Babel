@@ -32,7 +32,24 @@ jokeId.addEventListener('click', event => {
   jokeFacade.addJoke(addJokes.value)
   JokeList();
 })
+
 /* JS For Exercise-2 below */
+let getQ = document.getElementById('getQ')
+getQ.addEventListener('click', event => {
+  getQuote(event.target)
+})
+
+function getQuote(domElement) {
+  fetch('https://api.chucknorris.io/jokes/random')
+  .then(function (response) {
+    return response.json();
+  })
+  .then( function (data) {
+    const quote = data.value;
+    const textQ = document.getElementById('textQ').innerHTML = quote
+    console.log(data.value)
+  })
+}
 
 
 
