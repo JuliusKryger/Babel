@@ -15,6 +15,13 @@ let listOfJokes = jokes.map(joke => "<li>" + joke + "</li>")
 const listJokes = listOfJokes.join('')
 document.getElementById("jokes").innerHTML = listJokes
 
+const input = document.getElementById('findJoke');
+input.addEventListener('input', event => {
+  const findJoke = jokeFacade.getJokeById(input.value)
+  document.getElementById("jokeOutput").innerHTML = findJoke
+  console.log(input)
+})
+
 
 /* JS For Exercise-2 below */
 
