@@ -36,7 +36,8 @@ jokeId.addEventListener('click', event => {
 /* JS For Exercise-2 below */
 let getQ = document.getElementById('getQ')
 getQ.addEventListener('click', event => {
-  getQuote(event.target)
+  getQuote(event.target) 
+  setInterval(getQuote, 60000)
 })
 
 function getQuote(domElement) {
